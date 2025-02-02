@@ -1,0 +1,4 @@
+name: kbd_layout
+build:
+  settings:
+    dts_root: .
