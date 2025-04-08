@@ -5,13 +5,22 @@
 #define LNUM 3
 #define LMSE 4
 #define LBLE 5
+
+#ifdef HOMEROW_MODS
+#define LHM(mod, key) &lhm mod key
+#define RHM(mod, key) &rhm mod key
+#else
+#define LHM(mod, key) &kp key
+#define RHM(mod, key) &kp key
+#endif
+
 // DEFAULT LAYOUT LEFT
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_NUMROW_LEFT   &none         &kp N1        &kp N2       &kp N3       &kp N4       &kp N5
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_TOPROW_LEFT   &kp LWIN      &lt LBLE Q    &kp W        &kp E        &kp R        &kp T
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define DEF_MIDROW_LEFT   &kp LCTRL     &kp A         &lhm LWIN S  &lhm LALT D  &lhm LCTRL F &kp G      
+#define DEF_MIDROW_LEFT   &kp LCTRL     &kp A         LHM(LWIN, S) LHM(LALT, D) LHM(LCTRL, F) &kp G      
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_BOTROW_LEFT   &kp LALT      &kp Z         &kp X        &kp C        &lt 1 V      &kp B
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -23,7 +32,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_TOPROW_RIGHT  &lt LMSE Y    &kp U         &kp I        &kp O        &lt 4 P      &kp RWIN
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define DEF_MIDROW_RIGHT  &kp H         &rhm RCTRL J  &rhm LALT K  &rhm RWIN L  &kp BACKSPACE &kp RCTRL
+#define DEF_MIDROW_RIGHT  &kp H         RHM(RCTRL, J) RHM(LALT, K) RHM(RWIN, L) &kp BACKSPACE &kp RCTRL
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_BOTROW_RIGHT  &kp N         &kp M         &kp COMMA    &kp DOT      &kp TAB      &kp LALT
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -37,7 +46,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define SYM_TOPROW_LEFT   &trans        &kp PERCENT   &kp LPAR     &kp RPAR     &kp SEMICOLON &kp CARET
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define SYM_MIDROW_LEFT   &trans        &kp QUESTION  &lhm LWIN LBKT &lhm LALT RBKT &lhm LCTRL COLON &kp SLASH 
+#define SYM_MIDROW_LEFT   &trans        &kp QUESTION  LHM(LWIN, LBKT) LHM(LALT, RBKT) LHM(LCTRL, COLON) &kp SLASH 
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define SYM_BOTROW_LEFT   &trans        &kp AT_SIGN   &kp  LBRC    &kp RBRC     &kp DOLLAR   &kp TILDE
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -50,7 +59,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define SYM_TOPROW_RIGHT  &kp AMPERSAND &kp DOUBLE_QUOTES &kp LESS_THAN  &kp GREATER_THAN &kp SINGLE_QUOTE &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define SYM_MIDROW_RIGHT  &kp HASH      &rhm RCTRL EQUAL &rhm LALT PLUS &rhm LWIN STAR &kp EXCLAMATION &trans
+#define SYM_MIDROW_RIGHT  &kp HASH      RHM(RCTRL, EQUAL) RHM(LALT, PLUS) RHM(LWIN, STAR) &kp EXCLAMATION &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define SYM_BOTROW_RIGHT  &kp MINUS     &kp UNDERSCORE &kp GRAVE  &kp PIPE     &kp BACKSLASH &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -90,7 +99,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define NUM_TOPROW_LEFT   &trans        &kp F1        &kp F2       &kp F3       &kp F4       &kp   F5
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define NUM_MIDROW_LEFT   &trans        &kp F6        &lhm LWIN F7 &lhm LALT F8 &lhm LCTRL F9 &lt 3 F10
+#define NUM_MIDROW_LEFT   &trans        &kp F6        LHM(LWIN, F7) LHM(LALT, F8) LHM(LCTRL, F9) &lt 3 F10
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define NUM_BOTROW_LEFT   &trans        &kp F11       &kp F12      &kp F13     &kp F14       &kp F15
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -102,7 +111,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define NUM_TOPROW_RIGHT  &none         &kp N7        &kp N8       &kp N9       &none        &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define NUM_MIDROW_RIGHT  &to 0         &rhm RCTRL N4 &rhm LALT N5 &rhm LWIN N6 &trans       &trans
+#define NUM_MIDROW_RIGHT  &to 0         RHM(RCTRL, N4) RHM(LALT, N5) RHM(RWIN, N6) &trans       &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define NUM_BOTROW_RIGHT  &kp N0        &kp N1        &kp N2       &kp N3       &trans       &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
