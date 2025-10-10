@@ -123,9 +123,9 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_NUMROW_LEFT   &trans        &kp N1        &kp N2       &kp N3       &kp N4       &kp N5
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_TOPROW_LEFT   &trans        &none         &none        &mmv MOVE_UP &none        &msc MOVE_DOWN
+#define MSE_TOPROW_LEFT   &trans        &none         &none        &mmv MOVE_UP &none        &msc SCRL_DOWN
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_MIDROW_LEFT   &tran s       &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc MOVE_UP
+#define MSE_MIDROW_LEFT   &tran s       &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_BOTROW_LEFT   &trans        &none         &none        &none        &none        &none         
 //                       |-------------|-------------|------------|------------|------------|------------|
