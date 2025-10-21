@@ -18,7 +18,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_NUMROW_LEFT   &none         &kp N1        &kp N2       &kp N3       &kp N4       &kp N5
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define DEF_TOPROW_LEFT   &kp LWIN      &lt LBLE Q    &kp W        &kp E        &kp R        &kp T
+#define DEF_TOPROW_LEFT   &kp LWIN      &lt LBLE Q    &kp W        &kp E        &kp R        &lt LMSE T
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_MIDROW_LEFT   &kp LCTRL     &kp A         LHM(LWIN, S) LHM(LALT, D) LHM(LCTRL, F) &kp G      
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -30,7 +30,7 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_NUMROW_RIGHT  &kp N6        &kp N7        &kp N8       &kp N9       &kp N0       &none
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define DEF_TOPROW_RIGHT  &lt LMSE Y    &kp U         &kp I        &kp O        &lt 4 P      &kp RWIN
+#define DEF_TOPROW_RIGHT  &kp Y    &kp U         &kp I        &kp O        &lt 4 P      &kp RWIN
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define DEF_MIDROW_RIGHT  &kp H         RHM(RCTRL, J) RHM(LALT, K) RHM(RWIN, L) &kp BACKSPACE &kp RCTRL
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -123,9 +123,9 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_NUMROW_LEFT   &trans        &kp N1        &kp N2       &kp N3       &kp N4       &kp N5
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_TOPROW_LEFT   &trans        &none         &none        &mmv MOVE_UP &none        &msc SCRL_DOWN
+#define MSE_TOPROW_LEFT   &trans        &none         &none        &none        &none        &none
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_MIDROW_LEFT   &trans        &none         &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP
+#define MSE_MIDROW_LEFT   &trans        &none         &kp LWIN     &kp LALT     &kp LCTRL    &none
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_BOTROW_LEFT   &trans        &none         &none        &none        &none        &none         
 //                       |-------------|-------------|------------|------------|------------|------------|
@@ -135,11 +135,11 @@
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_NUMROW_RIGHT  &kp N6        &kp N7        &kp N8       &kp N9       &kp N0       &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_TOPROW_RIGHT  &none         &mkp LCLK     &mkp MCLK    &mkp RCLK    &none        &trans
+#define MSE_TOPROW_RIGHT  &msc SCRL_DOWN &mkp LCLK    &mmv MOVE_UP &mkp RCLK    &none        &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_MIDROW_RIGHT  &none         &kp RCTRL     &kp LALT     &kp RWIN     &trans       &trans
+#define MSE_MIDROW_RIGHT  &msc SCRL_UP  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans  &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
-#define MSE_BOTROW_RIGHT  &none         &none         &none        &none        &trans       &trans
+#define MSE_BOTROW_RIGHT  &none         &none         &mkp MCLK    &none        &trans       &trans
 //                       |-------------|-------------|------------|------------|------------|------------|
 #define MSE_THUMBS_RIGHT                                           &trans        &none        &none
 
